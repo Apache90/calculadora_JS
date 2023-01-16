@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+h3 {
+  text-align: center;
+  color: rgb(96, 151, 151);
+  margin-top: 30px;
+}
+
+body {
+  background: linear-gradient(45deg, grey, black);
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.calculator {
+  position: relative;
+  height: auto;
+  width: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px white;
+  background-color: rgba(0, 0, 0, 0.438);
+}
+.calculator #display {
+  color: white;
+  margin: 0 10px;
+  height: 80px;
+  width: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.calculator #equal {
+  height: 130px;
+}
+.calculator #clear {
+  background-color: rgb(96, 151, 151);
+  color: black;
+}
+.calculator .btn-number {
+  background-color: black;
+  color: rgb(96, 151, 151);
+}
+.calculator .btn-operator {
+  background-color: rgb(96, 151, 151);
+  color: black;
+}
+.calculator .btn-equal {
+  background-color: rgb(96, 151, 151);
+  color: black;
+}
+.calculator.dark {
+  background-color: rgb(190, 190, 190);
+}
+.calculator.dark #display {
+  color: black;
+}
+.calculator.dark #clear {
+  background-color: black;
+  color: rgb(96, 151, 151);
+}
+.calculator.dark .btn-number {
+  background-color: rgb(96, 151, 151);
+  color: black;
+}
+.calculator.dark .btn-operator {
+  background-color: black;
+  color: rgb(96, 151, 151);
+}
+
+.theme-toggler {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+}
+.theme-toggler::before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #333;
+  z-index: -1;
+}
+
+.theme-toggler .active {
+  color: #333;
+}
+.theme-toggler .active::before {
+  background-color: white;
+}
+
+button {
+  height: 60px;
+  width: 60px;
+  border: 0;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+button:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=style.css.map */
